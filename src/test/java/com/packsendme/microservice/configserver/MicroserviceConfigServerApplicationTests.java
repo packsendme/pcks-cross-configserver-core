@@ -1,4 +1,4 @@
-package com.packsendme.microservice.configserver.microserviceconfigserver;
+package com.packsendme.microservice.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
