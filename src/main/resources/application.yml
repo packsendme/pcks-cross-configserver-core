@@ -2,8 +2,6 @@ server:
   port: 9090
 
 spring:
-  profiles:
-    active: production
   application:
     name: packsendme-config-server
   cloud:
