@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        NAME_CONTAINER = "packsendme-support-configserver"
-        NAME_IMAGE = "microservice-sup-configserver:1"
+        NAME_CONTAINER = "psm-config-configserver"
+        NAME_IMAGE = "microservice-config-configserver:1"
         ID_CONTAINER = null 
         PORT_CONTAINER = "9090:9090"
     }
