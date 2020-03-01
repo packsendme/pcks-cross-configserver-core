@@ -11,4 +11,4 @@ spring:
       server:
         git:
           uri: https://github.com/packsendme/microservice-config
-          searchPaths: Configuration, mc-southamerica-rep
+          searchPaths: Configuration
