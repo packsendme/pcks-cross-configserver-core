@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: production
+    active: dev
   application:
     name: packsendme-config-server
   cloud:
@@ -11,4 +11,4 @@ spring:
       server:
         git:
           uri: https://github.com/packsendme/microservice-config
-          searchPaths: Configuration
+          searchPaths: Configuration, mc-southamerica-rep, Develop
