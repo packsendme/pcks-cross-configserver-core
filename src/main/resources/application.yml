@@ -10,5 +10,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/packsendme/packsendme-config-server
+          uri: https://github.com/packsendme/microservice-config
           searchPaths: Develop
+          label: develop
