@@ -5,11 +5,11 @@ spring:
   profiles:
     active: dev
   application:
-    name: packsendme-config-server
+    name: pcks-cross-configserver-core
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/packsendme/microservice-config
+          uri: https://github.com/packsendme/pcks-cross-config-core.git
           searchPaths: Develop
           label: develop

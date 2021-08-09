@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     environment {
-        NAME_CONTAINER = "configserver-microservice-psm"
-        NAME_IMAGE = "configserver-image-psm:1"
-        ID_CONTAINER = null 
+        NAME_CONTAINER = "pcks-cross-configserver-core"
+        NAME_IMAGE = "pcks-cross-configserver-img:1"
+        ID_CONTAINER = null
         PORT_CONTAINER = "9090:9090"
     }
 
     stages {
-        
+
         stage('Git Checkout Repositorio') {
             steps {
                 git branch: 'develop',
-                url: 'https://github.com/packsendme/packsendme-config-server.git'
+                  url: 'https://github.com/packsendme/pcks-cross-configserver-core.git'
             }
         }
         stage('Java Build') {
@@ -21,7 +21,7 @@ pipeline {
                 sh 'mvn clean install -DskipTests'
             }
         }
-    
+
         stage("Docker Delopy - Check Container") {
             steps {
                 script {
@@ -30,9 +30,9 @@ pipeline {
                 }
             }
         }
-        
+
         stage("Docker Delopy  - Stop Container") {
-           when { 
+           when {
                allOf {
                         expression { ID_CONTAINER != null }
                         expression { ID_CONTAINER != "" }
@@ -54,6 +54,6 @@ pipeline {
                 }
             }
         }
-        
+
     }
 }

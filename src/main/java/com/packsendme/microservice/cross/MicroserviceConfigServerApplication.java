@@ -1,4 +1,4 @@
-package com.packsendme.microservice.configserver;
+package com.packsendme.microservice.cross;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
